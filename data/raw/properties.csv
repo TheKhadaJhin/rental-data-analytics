@@ -1,0 +1,13 @@
+property_id,property_name,city,property_type,bedrooms,max_guests,active_from,acquisition_channel,base_nightly_rate_usd
+P001,Palermo Studio,Buenos Aires,Studio,1,2,2024-01-01,Organic,68
+P002,Recoleta Classic,Buenos Aires,Apartment,2,4,2024-01-01,Partner,92
+P003,San Telmo Loft,Buenos Aires,Loft,1,3,2024-01-01,Organic,76
+P004,Nueva Córdoba Flat,Córdoba,Apartment,1,3,2024-01-01,Referral,51
+P005,Güemes Terrace,Córdoba,Apartment,2,5,2024-01-01,Partner,64
+P006,Alta Gracia Retreat,Córdoba,House,2,5,2024-03-01,Referral,58
+P007,Mendoza Central Suite,Mendoza,Apartment,1,2,2024-01-01,Organic,61
+P008,Chacras Garden House,Mendoza,House,3,7,2024-01-01,Partner,118
+P009,Wine Route Cabin,Mendoza,Cabin,2,4,2024-05-01,Referral,84
+P010,Bariloche Lake View,Bariloche,Apartment,2,5,2024-01-01,Partner,126
+P011,Patagonia Cabin,Bariloche,Cabin,2,5,2024-01-01,Organic,111
+P012,Cerro Catedral Base,Bariloche,Apartment,1,4,2024-06-01,Referral,98

@@ -1,0 +1,13 @@
+property_id,property_name,city,property_type,available_nights,booked_nights,occupancy_pct,gross_booking_value_usd,gross_adr_usd,completed_bookings,cancelled_bookings,cancellation_rate_pct,avg_rating,revenue_rank_in_city
+P010,Bariloche Lake View,Bariloche,Apartment,731,242,33.11,37360.41,154.38,50,5,9.09,4.54,1
+P011,Patagonia Cabin,Bariloche,Cabin,731,251,34.34,32695.88,130.26,50,6,10.71,4.46,2
+P008,Chacras Garden House,Mendoza,House,731,242,33.11,32269.06,133.34,47,5,9.62,4.49,1
+P009,Wine Route Cabin,Mendoza,Cabin,610,238,39.02,22688.0,95.33,49,4,7.55,4.47,2
+P002,Recoleta Classic,Buenos Aires,Apartment,731,181,24.76,19450.15,107.46,34,8,19.05,4.56,1
+P001,Palermo Studio,Buenos Aires,Studio,731,242,33.11,19211.87,79.39,49,5,9.26,4.48,2
+P007,Mendoza Central Suite,Mendoza,Apartment,731,274,37.48,19139.93,69.85,48,8,14.29,4.51,3
+P005,Güemes Terrace,Córdoba,Apartment,731,253,34.61,18728.2,74.02,49,7,12.5,4.5,1
+P012,Cerro Catedral Base,Bariloche,Apartment,579,159,27.46,18564.58,116.76,36,2,5.26,4.51,3
+P003,San Telmo Loft,Buenos Aires,Loft,731,203,27.77,17737.3,87.38,42,5,10.64,4.51,3
+P004,Nueva Córdoba Flat,Córdoba,Apartment,731,266,36.39,15874.18,59.68,52,4,7.14,4.53,2
+P006,Alta Gracia Retreat,Córdoba,House,671,215,32.04,14506.02,67.47,39,3,7.14,4.49,3

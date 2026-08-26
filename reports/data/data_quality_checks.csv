@@ -1,0 +1,8 @@
+check_name,issue_count
+booking_created_after_check_in,0
+duplicate_booking_ids,0
+invalid_prices,0
+invalid_ratings_by_status,0
+invalid_stay_dates,0
+orphan_property_references,0
+overlapping_completed_stays,0

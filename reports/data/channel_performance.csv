@@ -1,0 +1,5 @@
+channel,total_bookings,completed_bookings,cancelled_bookings,booked_nights,gross_booking_value_usd,revenue_share_pct,gross_adr_usd,cancellation_rate_pct,avg_lead_time_days,revenue_rank
+Airbnb,213,190,23,1013,102338.54,38.15,101.03,10.8,50.6,1
+Booking.com,208,190,18,946,85944.12,32.04,90.85,8.65,48.6,2
+Direct,137,119,18,593,55775.91,20.79,94.06,13.14,50.2,3
+Expedia,49,46,3,214,24167.01,9.01,112.93,6.12,54.3,4
