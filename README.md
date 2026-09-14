@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-Analytics-003B57?logo=sqlite&logoColor=white)
 ![pandas](https://img.shields.io/badge/pandas-Data%20Processing-150458?logo=pandas&logoColor=white)
-![Tests](https://img.shields.io/badge/tests-5%20passing-2E7D32)
+[![Tests](https://github.com/TheKhadaJhin/rental-data-analytics/actions/workflows/tests.yml/badge.svg?branch=main&event=push)](https://github.com/TheKhadaJhin/rental-data-analytics/actions/workflows/tests.yml)
 ![Data](https://img.shields.io/badge/data-100%25%20synthetic-6A5ACD)
 
 An end-to-end **SQL and Python analytics project** for a fictional short-term-rental portfolio. It turns raw booking records into business-ready KPIs, channel and property rankings, data-quality checks, visual reports, and an executive summary.
@@ -149,6 +149,8 @@ Run the automated checks:
 ```bash
 python -m unittest discover -s tests -v
 ```
+
+The same integration checks run on every push and pull request through [GitHub Actions](https://github.com/TheKhadaJhin/rental-data-analytics/actions/workflows/tests.yml). The test suite regenerates the synthetic dataset, SQLite database, and analytical reports before checking row counts, unique booking IDs, data quality, monthly metrics, and property rankings. Open the Tests badge above to inspect the latest run and its logs.
 
 The pipeline can be rerun safely: the same synthetic dataset and reports are regenerated every time.
 
