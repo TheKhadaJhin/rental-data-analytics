@@ -164,6 +164,42 @@ The pipeline can be rerun safely: the same synthetic dataset and reports are reg
 
 Checkout dates are excluded from occupied-night counts. Lodging revenue is allocated to the actual night stayed; cleaning fees are assigned to the check-in month.
 
+## Worked SQL example: a stay across two months
+
+The committed [synthetic source data](data/raw/bookings.csv) includes booking
+`B0002`: check-in on **2024-01-28**, checkout on **2024-02-03**, a nightly rate of
+**$66.16** and a one-time cleaning fee of **$25.50**.
+
+The `booking_nights` recursive CTE in [the monthly KPI query](sql/03_monthly_kpis.sql)
+expands the stay into six occupied nights: January 28–31 and February 1–2.
+Checkout on February 3 is excluded. The `cleaning_metrics` CTE assigns the fee once,
+to January, because that is the check-in month.
+
+The [read-only verification query](sql/examples/booking_B0002.sql) isolates this booking
+and returns:
+
+| Month | Booked nights | Lodging revenue (USD) | Cleaning revenue (USD) | Gross booking value (USD) |
+|---|---:|---:|---:|---:|
+| 2024-01 | 4 | 264.64 | 25.50 | 290.14 |
+| 2024-02 | 2 | 132.32 | 0.00 | 132.32 |
+
+The total is **6 nights and $422.46**, but the revenue belongs to two months.
+Assigning the whole stay to January would overstate January's occupancy and revenue
+and understate February's. Counting the cleaning fee on every night would also
+overstate gross booking value.
+
+From the repository root, after installing the dependencies, load the committed
+synthetic CSVs and execute the example with Python's built-in SQLite driver:
+
+```bash
+python src/load_data.py
+python -c "import sqlite3; from pathlib import Path; db=sqlite3.connect('file:data/processed/rental_analytics.db?mode=ro', uri=True); print(*db.execute(Path('sql/examples/booking_B0002.sql').read_text(encoding='utf-8')), sep='\n'); db.close()"
+```
+
+Output columns follow the table above. This example was checked against the original
+monthly KPI query using only `B0002`; the portfolio query and its reporting rules are
+unchanged.
+
 ## Data privacy and limitations
 
 All records are **synthetic and generated locally**. The repository contains no real guest names, addresses, contact details, credentials, or payment information. The sample is designed for portfolio demonstration and should not be interpreted as real market performance.
